@@ -1,4 +1,4 @@
-name: Patch VBMeta
+name: Patch VBMeta.img - mod by vaginessa
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
       ARCHITECTURE:
         description: 'Architecture'
         required: true
-        default: 'x86_64'
+        default: 'arm64-v8a'
         type: choice
         options:
         - x86_64
@@ -49,8 +49,8 @@ jobs:
         tag: ${{ github.run_id }}
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          Your vbmeta image are now ready!
-          Flash it now.
+          Your patched vbmeta image is ready!
+          you may flash it now.
 
     - name: Link to Release
       run: |
