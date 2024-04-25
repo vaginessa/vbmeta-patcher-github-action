@@ -24,7 +24,7 @@ jobs:
     steps:
  
     - name: Check Out
-      uses: actions/checkout@v4.1.0
+      uses: actions/checkout@v4.0.0
       
     - name: Operating System Information
       run: |
